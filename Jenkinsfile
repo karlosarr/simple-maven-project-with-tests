@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('SonarCloud') {
             environment {
-                SCANNER_HOME = tool 'sonarscanner 5.0.1'
+                SCANNER_HOME = tool 'sonarscanner'
                 ORGANIZATION = "karlosarr"
             }
             steps {
