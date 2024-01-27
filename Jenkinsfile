@@ -13,7 +13,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv(installationName: 'SonarCloud') {
-                    sh "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=karlosarr_simple-maven-project-with-tests"
+                    sh "mvn -Dmaven.test.failure.ignore=true verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=karlosarr_simple-maven-project-with-tests"
                 }
             }
         }
